@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-var ClientComponent = require('./component');
+var Component = require('./component');
 
-ReactDOM.hydrate(React.createElement(ClientComponent), document);
+ReactDOM.hydrate(React.createElement(Component), document);

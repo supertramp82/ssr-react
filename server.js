@@ -6,13 +6,13 @@ var express = require('express');
 var app = express();
 var React = require('react');
 var ReactDOMServer = require('react-dom/server');
-var ClientComponent = require('./component');
+var Component = require('./component');
 
 app.use(express.static('public'));
 
 app.get('/', function(req, res) {
   var html = ReactDOMServer.renderToString(
-    React.createElement(ClientComponent)
+    React.createElement(Component)
   );
   res.send(html);
 });

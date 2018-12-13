@@ -2,7 +2,7 @@ import React from 'react';
 var createReactClass = require('create-react-class');
 
 module.exports = createReactClass({
-  //class ClientComponent extends React.Component {
+  //class Component extends React.Component {
   _handleClick() {
     alert('You just clicked a button...');
   },
