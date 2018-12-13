@@ -8,6 +8,8 @@ var React = require('React');
 var ReactDOMServer = require('react-dom/server');
 var Component = require('./Component');
 
+app.use(express.static('public'));
+
 app.get('/', function(req, res) {
   var html = ReactDOMServer.renderToString(
     React.createElement(Component)

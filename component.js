@@ -8,11 +8,19 @@ module.exports = createReactClass({
 
   render: function() {
     return (
-      <div>
-        <h1>Hello World!</h1>
-        <p>Server-side rendering...</p>
-        <button onClick={this._handleClick}>Click</button>
-      </div>
+      <html>
+        <head>
+          <title>Universal app with React</title>
+          <link rel="stylesheet" href="./style.css" />
+        </head>
+        <body>
+          <div>
+            <h1>Hello World!</h1>
+            <p>Server-side rendering...</p>
+            <button onClick={this._handleClick}>Click</button>
+          </div>
+        </body>
+      </html>
     );
   },
 });
