@@ -4,15 +4,15 @@ require('babel-register')({
 
 var express = require('express');
 var app = express();
-var React = require('React');
+var React = require('react');
 var ReactDOMServer = require('react-dom/server');
-var Component = require('./Component');
+var ClientComponent = require('./component');
 
 app.use(express.static('public'));
 
 app.get('/', function(req, res) {
   var html = ReactDOMServer.renderToString(
-    React.createElement(Component)
+    React.createElement(ClientComponent)
   );
   res.send(html);
 });

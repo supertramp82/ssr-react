@@ -1,12 +1,13 @@
-var React = require('react');
+import React from 'react';
 var createReactClass = require('create-react-class');
 
 module.exports = createReactClass({
-  _handleClick: function() {
-    alert();
+  //class ClientComponent extends React.Component {
+  _handleClick() {
+    alert('You just clicked a button...');
   },
 
-  render: function() {
+  render() {
     return (
       <html>
         <head>
@@ -19,6 +20,7 @@ module.exports = createReactClass({
             <p>Server-side rendering...</p>
             <button onClick={this._handleClick}>Click</button>
           </div>
+          <script src="./bundle.js" />
         </body>
       </html>
     );
