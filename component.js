@@ -1,4 +1,5 @@
 import React from 'react';
+import { runInThisContext } from 'vm';
 var createReactClass = require('create-react-class');
 
 module.exports = createReactClass({
@@ -8,6 +9,8 @@ module.exports = createReactClass({
   },
 
   render() {
+    var url = this.props.url;
+
     return (
       <html>
         <head>
@@ -16,8 +19,10 @@ module.exports = createReactClass({
         </head>
         <body>
           <div>
-            <h1>Hello World!</h1>
             <p>Server-side rendering...</p>
+            {{ url } ? <img src={url} alt="placeholder" /> : ''}
+            <br />
+            <br />
             <button onClick={this._handleClick}>Click</button>
           </div>
           <script src="./bundle.js" />
